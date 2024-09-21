@@ -9,15 +9,15 @@ public class WhenCreatingObjects {
 
         Cat Felix = new Cat("Felix", "Omakase", 3);
         Cat Mojo = new Cat("Mojo", "Sashimi", 4);
-        Cat Chma = new Cat("Chma", "KFC", 2);
+        Cat Matcha = new Cat("Matcha", "KFC", 2);
 
-        Chma.setPrice(168);
+        Matcha.setPrice(168);
 
         System.out.println(Mojo.ageInTwoYears());
 
         System.out.println(Felix.getCatDetails());
         System.out.println(Mojo.getCatDetails());
-        System.out.println("The price of this Chma is $"+ Chma.returnPrice() +".");
+        System.out.println("The price of this Matcha is $"+ Matcha.returnPrice() +".");
 
     }
 
@@ -25,20 +25,45 @@ public class WhenCreatingObjects {
     @Test
     public void creating_a_dog() {
 
-        Dog Chkea = new Dog("Sony", 8, "Husky", 8.2d, "$150");
-
+        Dog Chkea = new Dog("Sony", 8, "Husky");
         System.out.println(Chkea.ageInTwoYears());
+
+    }
+
+    @Test
+    public void createAHamster(){
+        Hamster Jerry = new Hamster("Jerry", 2,"play ground");
+        System.out.println(Jerry.ageInTwoYears());
+        System.out.println(Jerry.getFavouriteGame());
 
     }
 
 
     @Test
     public void catMakesNoise() {
-        Cat felix = new Cat("Felix", "Omakase", 23);
-        felix.makeNoise();
-        System.out.println(felix.loudScream());
+        Cat felix = new Cat("Felix", "Omakase", 3);
+        System.out.println("Felix goes " + felix.makeNoise());
         felix.feed("Omakase");
         felix.groom();
+    }
+
+
+    @Test
+    public void dog_make_noise(){
+        Dog fido = new Dog("Fido", 2,"Husky");
+        System.out.println("Fido goes " + fido.makeNoise());
+
+    }
+
+    @Test
+    public void pets_make_noise() {
+        Pet felix = new Cat("Felix", "Omakase", 3);
+        Pet fido = new Dog("Fido", 2, "Husky");
+        Pet jerry = new Hamster("Jerry", 1, "play ground");
+
+        System.out.println("Felix goes " + felix.makeNoise());
+        System.out.println("Fido goes " + fido.makeNoise());
+        System.out.println("Jerry goes " + jerry.makeNoise());
 
     }
 

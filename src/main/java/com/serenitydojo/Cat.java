@@ -4,6 +4,8 @@ public class Cat extends Pet {
     private String favouriteFood;
     private int price;
 
+    public static final String CAT_NOISE = "Meow!";
+
     public Cat(String name, String favouriteFood, int age) {
         super(name, age);
         this.favouriteFood = favouriteFood;
@@ -22,8 +24,8 @@ public class Cat extends Pet {
         return price;
     }
 
-    public void makeNoise() {
-        System.out.println("Meow!");
+    public String makeNoise() {
+        return CAT_NOISE;
     }
 
     public void feed(String food) {
