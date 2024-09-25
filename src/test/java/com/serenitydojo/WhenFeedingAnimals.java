@@ -4,6 +4,11 @@ import com.serenitydojo.model.Feeder;
 import org.junit.Assert;
 import org.junit.Test;
 
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
 import static com.serenitydojo.model.AnimalType.CAT;
 import static com.serenitydojo.model.AnimalType.DOG;
 import static com.serenitydojo.model.AnimalType.HAMSTER;
@@ -71,5 +76,33 @@ public class WhenFeedingAnimals {
         String food = feeder.feeds(HAMSTER, true);
         System.out.println(food);
         Assert.assertEquals("Lettuce", food);
+    }
+
+    @Test
+    public void listOfColours(){
+
+        String[] colour = {"red", "blue", "green", "white"};
+        int[] age = {27, 23, 89};
+
+        String[] moreColours = new String[4];
+        moreColours[0] = "yellow";
+        moreColours[1] = "black";
+        moreColours[2] = "pink";
+
+        for( int i = 0; i < 3; i++){
+            System.out.println(moreColours[i]);
+        }
+
+        Set<String> myCars = new HashSet<>();
+
+        myCars.add("Land Rover Defender");
+        myCars.add("Range Rover Velar");
+        myCars.add("Mercedes S 450");
+        myCars.add("Land Rover Defender");
+
+        for (String dreamCars : myCars) {
+            System.out.println("Dream Cars : " + dreamCars);
+        }
+
     }
 }
